@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>† L World † - Welcome to my world... xD</title>
+    <style>
+        /* --- ESTILOS GERAIS 2008 STYLE --- */
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: "Verdana", "Arial", "Trebuchet MS", sans-serif;
+            font-size: 12px;
+            margin: 0;
+            padding: 20px;
+            cursor: default;
+        }
+
+        a {
+            color: #ff0000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+            cursor: crosshair;
+        }
+
+        /* --- LAYOUT E ESTRUTURA --- */
+        #container {
+            width: 850px;
+            margin: 0 auto;
+            border: 2px solid #555555;
+            padding: 15px;
+            background-color: #0a0a0a;
+        }
+
+        #header {
+            text-align: center;
+            border-bottom: 3px double #ff0000;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        #header h1 {
+            font-size: 38px;
+            margin: 0;
+            color: #ffffff;
+            text-shadow: 3px 3px #555555;
+            font-family: "Times New Roman", serif;
+            letter-spacing: 2px;
+        }
+
+        #header p {
+            font-style: italic;
+            color: #888888;
+            margin: 5px 0 0 0;
+        }
+
+        #main-content {
+            display: flex;
+            gap: 15px;
+        }
+
+        /* --- CAIXAS RETRÔ (BOXES) --- */
+        .box {
+            background-color: #1a1a1a;
+            border: 1px solid #ffffff;
+            margin-bottom: 15px;
+            padding: 10px;
+        }
+
+        .box-title {
+            background-color: #333333;
+            color: #ffffff;
+            padding: 4px 8px;
+            font-weight: bold;
+            border-bottom: 1px dashed #ff0000;
+            margin: -10px -10px 10px -10px;
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+
+        /* --- SIDEBAR (COLUNA DA ESQUERDA) --- */
+        #sidebar {
+            width: 240px;
+            flex-shrink: 0;
+        }
+
+        .profile-pic-container {
+            width: 100%;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .profile-pic-container img {
+            width: 100%;
+            max-height: 250px;
+            object-fit: contain;
+            border: 2px dashed #ffffff;
+            background-color: #222;
+        }
+
+        .info-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .info-list li {
+            border-bottom: 1px dotted #333;
+            padding: 3px 0;
+        }
+
+        /* --- ÁREA PRINCIPAL (COLUNA DA DIREITA) --- */
+        #content {
+            flex-grow: 1;
+        }
+
+        .post {
+            border: 1px dashed #ff0000;
+            background-color: #111111;
+            padding: 12px;
+            margin-bottom: 15px;
+        }
+
+        .post-title {
+            font-size: 15px;
+            color: #ff0000;
+            font-weight: bold;
+            margin-bottom: 5px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 3px;
+        }
+
+        .post-date {
+            font-size: 10px;
+            color: #777777;
+            margin-bottom: 10px;
+        }
+
+        /* --- COMPONENTES INTERATIVOS --- */
+        .vote-btn {
+            background: #333;
+            color: #fff;
+            border: 1px solid #fff;
+            padding: 4px 10px;
+            font-family: inherit;
+            font-size: 11px;
+            margin-right: 10px;
+        }
+
+        .vote-btn:hover {
+            background: #ff0000;
+            cursor: pointer;
+        }
+
+        .comment-item {
+            border-bottom: 1px dotted #555;
+            padding: 8px 0;
+        }
+
+        .comment-user {
+            color: #ff0000;
+            font-weight: bold;
+            font-size: 11px;
+        }
+
+        .comment-text {
+            margin-top: 3px;
+        }
+
+        #comment-form input, #comment-form textarea {
+            width: 95%;
+            background-color: #000;
+            border: 1px solid #555;
+            color: #fff;
+            padding: 5px;
+            margin-bottom: 8px;
+            font-family: inherit;
+        }
+
+        #comment-form button {
+            background: #222;
+            color: #fff;
+            border: 1px solid #fff;
+            padding: 3px 12px;
+        }
+
+        #comment-form button:hover {
+            background: #555;
+            cursor: pointer;
+        }
+
+        /* --- RODAPÉ --- */
+        #footer {
+            text-align: center;
+            border-top: 1px dashed #ff0000;
+            padding-top: 10px;
+            margin-top: 20px;
+            font-size: 10px;
+            color: #555555;
+        }
+    </style>
+</head>
+<body>
+
+<div id="container">
+
+    <!-- CABEÇALHO -->
+    <div id="header">
+        <h1>† L World †</h1>
+        <p>~~ "Justiça prevalecerá no final de tudo!" ~~ s2</p>
+    </div>
+
+    <!-- CORPO DO BLOG -->
+    <div id="main-content">
+        
+        <!-- SIDEBAR ESQUERDA -->
+        <div id="sidebar">
+            
+            <div class="box">
+                <!-- COLOQUE O LINK DA SUA IMAGEM ENTRE AS ASPAS DO src APENAS NA LINHA ABAIXO -->
+                <div class="profile-pic-container">
+                    <img src="https://media.tenor.com/0j2SrBcInToAAAAM/l-lawliet-death-note.gif" alt="Foto do L">
+                </div>
+                <div style="text-align: center; font-weight: bold; margin-bottom: 5px;">Status: <span style="color:#00ff00;">Online</span></div>
+                <ul class="info-list">
+                    <li><b>Anime fav:</b> Death Note</li>
+                    <li><b>Char fav:</b> L Lawliet</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <div class="box-title">Controles xD</div>
+                <ul class="info-list">
+                    <li><a href="#guestbook">» Assina meu Guestbook!!</a></li>
+                    <li><a href="#" onclick="return false;">» Add nos favoritos!!</a></li>
+                    <li><b>Visitas:</b> <span id="view-counter" style="color: #ff0000; font-weight: bold;">0024859</span></li>
+                    <li><b>Last Update:</b> 14/11/2008</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <div class="box-title">Enquete do Blog!!</div>
+                <p style="margin-top: 0;"><b>Quem eh o maior genio??</b></p>
+                <form id="poll-form" onsubmit="submitPoll(); return false;">
+                    <input type="radio" name="poll" id="p1" required> <label for="p1">L</label><br>
+                    <input type="radio" name="poll" id="p2"> <label for="p2">Light</label><br>
+                    <button type="submit" class="vote-btn" style="margin-top: 8px; width: 100%;">Votar agr!!</button>
+                </form>
+                <div id="poll-result" style="margin-top: 8px; font-weight: bold; color: #ff0000; display: none; text-align: center;">
+                    Voto Enviado! Blz!! xD
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-title">Parceiros / Affiliates</div>
+                <ul class="info-list">
+                    <li><a href="#">» AnimeManiacs BR</a></li>
+                    <li><a href="#">» Portal DeathNote Brasil</a></li>
+                    <li><a href="#">» KiraHunters Blog</a></li>
+                    <li><a href="#">» OtakuWorld 2008</a></li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <div class="box-title">Arquivo</div>
+                <ul class="info-list">
+                    <li><a href="#">» Novembro 2008 (5)</a></li>
+                    <li><a href="#">» Outubro 2008 (8)</a></li>
+                    <li><a href="#">» Setembro 2008 (12)</a></li>
+                    <li><a href="#">» Agosto 2008 (3)</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- CONTEÚDO DIREITA -->
+        <div id="content">
+
+            <!-- INTRODUÇÃO -->
+            <div class="box">
+                <div class="box-title">::: BEM-VINDOS AO MEU ESPAÇO!!! :::</div>
+                <p><b>Oieee galeraaa!! ^^v</b></p>
+                <p>Sejam mto bem-vindos ao <b>† L World †</b>!! Esse eh o meu cantinho pra falar do melhor e mais incrível detetive do mundo dos animes!! Criei esse blog pq cansei de ver gente defendendo o Kira... pfvr neh vcs naum enxergam q o L eh o unico lado da justiça real?!?? xDD</p>
+                <p>Aki vou postar varias teorias, curiosidades q eu axo pela net e prints dos episodes!!! Fiquem a vontade pra dar uma olhada e naum esqueçam: <b>COMENTA AE!!!</b> Vlw pela visita e add o blog nos favoritos blz??</p>
+                <p><i>Flwssss!! ;D</i></p>
+            </div>
+
+           <!-- BOTOES DE BATTLE / LIKES CORRIGIDOS -->
+<div class="box" style="text-align: center; border: 1px solid #ff0000;">
+    <div class="box-title">ESCOLHA SEU LADO NO ANIME!!!</div>
+    <button class="vote-btn" onclick="vote('l')">👍 Team L (<span id="count-l">1458</span>)</button>
+    <button class="vote-btn" onclick="vote('kira')">👎 Team Kira (<span id="count-kira">342</span>)</button>
+</div>
+
+ <!-- NOVA SEÇÃO: MEUS AMIGOS (NA COLUNA DA DIREITA) -->
+            <div class="box">
+                <div class="box-title">::: MEUS AMIGOS DO BLOG!!! :::</div>
+                <ul class="info-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; padding: 5px;">
+                    
+                    <!-- AMIGO 1 -->
+                    <li style="display: flex; align-items: center; gap: 8px; border-bottom: none; padding: 0;">
+                        <img src="https://64.media.tumblr.com/1d3659af2fbfa7d0645160971a20d863/285412e9b18ec416-c4/s400x600/b95157eeae6e31103aee0f121178545c60b8a121.gif" alt="Avatar" style="width: 30px; height: 30px; border: 1px dashed #ffffff; object-fit: cover; background-color: #000;">
+                        <a href="#">» Misa_Misa</a>
+                    </li>
+
+                    <!-- AMIGO 2 -->
+                    <li style="display: flex; align-items: center; gap: 8px; border-bottom: none; padding: 0;">
+                        <img src="https://i.pinimg.com/originals/bf/55/39/bf553924d333b8549c942a098f22472a.gif" alt="Avatar" style="width: 30px; height: 30px; border: 1px dashed #ffffff; object-fit: cover; background-color: #000;">
+                        <a href="#">» L_omelhorr</a>
+                    </li>
+
+                    <!-- AMIGO 3 -->
+                    <li style="display: flex; align-items: center; gap: 8px; border-bottom: none; padding: 0;">
+                        <img src="https://viva.com.br/media/uploads/2025/05/death-note-anime.png" alt="Avatar" style="width: 30px; height: 30px; border: 1px dashed #ffffff; object-fit: cover; background-color: #000;">
+                        <a href="#">» teamL4ever</a>
+                    </li>
+
+                </ul>
+            </div>
+
+<!-- SCRIPT DE EXECUÇÃO DIRETA DA BATALHA -->
+<script>
+    // Inicializa os contadores com os mesmos valores do seu HTML
+    if (typeof votesL === 'undefined') {
+        var votesL = 1458;
+        var votesKira = 342;
+    }
+
+    // Função que faz os números subirem na tela
+    function vote(team) {
+        if (team === 'l') {
+            votesL++;
+            const lSpan = document.getElementById('count-l');
+            if (lSpan) lSpan.innerText = votesL;
+        } else if (team === 'kira') {
+            votesKira++;
+            const kiraSpan = document.getElementById('count-kira');
+            if (kiraSpan) kiraSpan.innerText = votesKira;
+        }
+    }
+</script>
+
+            <!-- POSTS DO BLOG -->
+            <div class="box-title" style="margin-top: 20px; font-size: 16px;">† Posts Recentes †</div>
+
+            <!-- Post 1 -->
+            <div class="post">
+                <div class="post-title">Por q o L eh o personagem mais inteligente?</div>
+                <div class="post-date">Postado em: 14/11/2008 as 22:14 | Categoria: Teorias</div>
+<!-- Post 1 -->
+<div class="post">
+    <div class="post-title">Por q o L eh o personagem mais inteligente?</div>
+    <div class="post-date">Postado em: 14/11/2008 às 22:14 | Categoria: Teorias</div>
+
+    <p>
+        Gente, fala serio... o L conseguiu descobrir q o Kira tava no Japão só usando aquela transmissão de TV falsa com o Lind L. Tailor!!!
+        Qndo vi aquilo pela primeira vez fikei de cara de verdade de verdade!!! 😱😱
+    </p>
+
+    <p>
+        O Light tem o Death Note e o Ryuk ajudando, entao fica facil pra ele...
+        mas o L usa apenas o cerebro e puro raciocinio logico!!!
+        Se naum fossem os deuses da morte e aquela trapaça toda no final, o L tinha pego ele mto antes!!!
+    </p>
+
+    <p>
+        Quem concorda comenta ae embaixo!!! xDD
+    </p>
+</div>
+
+<!-- Post 2 -->
+<div class="post">
+    <div class="post-title">Diferenças entre L e Light</div>
+    <div class="post-date">Postado em: 12/11/2008 às 18:40 | Categoria: Discussões</div>
+
+    <p>Resolvi fazer uma listinha basica das maiores diferenças entre os dois pra vcs verem como eles sao opostos perfeitos:</p>
+
+    <ul>
+        <li>O L ama doces e cafe (mto açucar!!), o Light eh tdo certinho e come normal.</li>
+
+        <li>O L senta daquela forma estranha pq se naum a capacidade de dedução dele cai 40% rsrs... ja o Light senta igual um principezinho da escola.</li>
+
+        <li>O L assume q eh infantil e odeia perder... o Light se acha um Deus perfeito q nunca erra. Mto arrogante axo naum??</li>
+    </ul>
+</div>
+
+<!-- Post 3 -->
+<div class="post">
+    <div class="post-title">Curiosidades q pouca gente sabe!!!</div>
+    <div class="post-date">Postado em: 09/11/2008 às 14:05 | Categoria: Curiosidades</div>
+
+    <p>Achei nuns forums gringos e decidi traduzir aki pra vcs hj!! ^^</p>
+
+    <ol>
+        <li>Vcs sabiam q o L nunca considera o Light menos de 5% de chance de ser o Kira?? Mesmo qndo ele finge acreditar, no fundo ele sabe a verdade total!!</li>
+
+        <li>A fita preta q ele usa no cabelo nos rascunhos originais do mangá seria bem maior!</li>
+
+        <li>Ele eh mto bom em capoeira!! Aquela briga dele com o Light algemados provou q ele bate mto bem kkkkkk mto irado!! ;D</li>
+    </ol>
+</div>
+
+<div class="comments-section">
+
+    <h2>Comentários da Galera (Comenta ae tb!!)</h2>
+
+    <div id="comments-box">
+
+        <div class="comment-item">
+            <div class="comment-user">L_Lawliet_Fan01 disse em 14/11/2008:</div>
+            <div class="comment-text">
+                L >>>>> Light xDD n tem nem comparação. O Light eh mto otario perto dele kkkkk mto bom o post!!
+            </div>
+        </div>
+
+        <div class="comment-item">
+            <div class="comment-user">MisaMisa_s2 disse em 14/11/2008:</div>
+            <div class="comment-text">
+                naum concordo kkkkk o Light-kun eh perfeitooo e vai criar um mundo novo!! s2 s2 s2 Kira rei!!
+            </div>
+        </div>
+
+        <div class="comment-item">
+            <div class="comment-user">Shinigami_Apple disse em 13/11/2008:</div>
+            <div class="comment-text">
+                o Ryuk eh mto massa rsrs. So quer saber de comer maçã e ver o circo pegar fogo xDDD
+            </div>
+        </div>
+
+        <div class="comment-item">
+            <div class="comment-user">Matsuda_Inocente disse em 12/11/2008:</div>
+            <div class="comment-text">
+                posta mais curiosidades!! ^^ Amo seu blog sempre olho dpois da escola. Flw vlw!!
+            </div>
+        </div>
+
+    </div>
+
+    <!-- LISTA DE COMENTÁRIOS (FAKES E REAIS FICAM JUNTOS AQUI) -->
+    <div id="comments-list">
+        <div class="comment-item">
+            <div class="comment-user">MisaMisa_S2 (14/11/2008 - 22:50):</div>
+            <div class="comment-text">O Raito-kun é o verdadeiro Deus do novo mundo!! Sinto muito L, mas ele vai te vencer!! S2 S2</div>
+        </div>
+        <div class="comment-item">
+            <div class="comment-user">Ryuk_Maça (14/11/2008 - 23:10):</div>
+            <div class="comment-text">Os humanos são tão interessantes... haha. Quero ver o circo pegar fogo!</div>
+        </div>
+    </div>
+
+    <!-- LINHA DIVISÓRIA -->
+    <hr style="border: none; border-top: 1px dashed #555; margin: 20px 0;">
+
+    <!-- FORMULÁRIO PARA DEIXAR RECADO (FICA EMBAIXO DOS COMENTÁRIOS) -->
+    <h3>Deixe seu recado aki!! ;D</h3>
+    <input type="text" id="c-name" placeholder="Seu nick...">
+    <br><br>
+    <textarea id="c-text" rows="5" placeholder="Escreve aki..."></textarea>
+    <br><br>
+    <button onclick="addComment()">
+        Enviar Recado!! \o/
+    </button>
+
+</div> <!-- FECHA A ÚNICA CAIXA DO BLOG -->
+
+</div> <!-- Fecha a div #content -->
+</div> <!-- Fecha a div #main-content -->
+
+<!-- RODAPÉ -->
+<div id="footer">
+    &copy; 2008 L World Blog - Todos os direitos reservados.<br>
+    Feito no Bloco de Notas com muito suor e café. Design 100% Retrô Emo/Otaku Style.
+</div>
+
+</div> <!-- Fecha o #container -->
+
+<!-- LOGICA DO SITE -->
+<script>
+    let likes = 0;
+    let dislikes = 0;
+    let totalVotes = 482; 
+
+    function addLike() {
+        likes++;
+        const likeSpan = document.getElementById('like-count');
+        if (likeSpan) likeSpan.innerText = likes;
+    }
+
+    function addDislike() {
+        dislikes++;
+        const dislikeSpan = document.getElementById('dislike-count');
+        if (dislikeSpan) dislikeSpan.innerText = dislikes;
+    }
+
+    function submitPoll() {
+        totalVotes++;
+        const votesSpan = document.getElementById('poll-votes');
+        if (votesSpan) votesSpan.innerText = totalVotes;
+        document.getElementById('poll-form').style.display = 'none';
+        document.getElementById('poll-result').style.display = 'block';
+    }
+
+    function addComment() {
+        const usernameInput = document.getElementById('c-name');
+        const textInput = document.getElementById('c-text');
+        const commentsList = document.getElementById('comments-list');
+
+        if (!usernameInput.value.trim() || !textInput.value.trim()) {
+            alert("Preenche o nick e a mensagem antes de enviar! xD");
+            return;
+        }
+
+        const name = usernameInput.value;
+        const text = textInput.value;
+
+        const newComment = document.createElement('div');
+        newComment.className = 'comment-item';
+        
+        const now = new Date();
+        const dateStr = `${now.getDate()}/${now.getMonth() + 1}/${now.getFullYear()}`;
+
+        newComment.innerHTML = `
+            <div class="comment-user">${name} (${dateStr}):</div>
+            <div class="comment-text">${text}</div>
+        `;
+
+        if (commentsList) {
+            commentsList.appendChild(newComment);
+        }
+
+        usernameInput.value = '';
+        textInput.value = '';
+    }
+</script>
+
+</body>
+</html>
+
+</div>
+
+<footer>
+    <p>© 2008 † L World † - Todos os direitos reservados para a justiça.</p>
+    <p>Feito de fã para fã. No KIRA allowed.</p>
+    <p>Hospedado por Bl0gSp0t Labs | Design by Me | Layout inspirado em MySpace retrô.</p>
+</footer>

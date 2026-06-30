@@ -1,0 +1,205 @@
+/* --- ESTILOS GERAIS 2008 STYLE --- */
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: "Verdana", "Arial", "Trebuchet MS", sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 20px;
+    cursor: default;
+}
+
+a {
+    color: #ff0000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    cursor: crosshair;
+}
+
+/* --- LAYOUT E ESTRUTURA --- */
+#container {
+    width: 850px;
+    margin: 0 auto;
+    border: 2px solid #555555;
+    padding: 15px;
+    background-color: #0a0a0a;
+}
+
+#header {
+    text-align: center;
+    border-bottom: 3px double #ff0000;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+#header h1 {
+    font-size: 38px;
+    margin: 0;
+    color: #ffffff;
+    text-shadow: 3px 3px #555555;
+    font-family: "Times New Roman", serif;
+    letter-spacing: 2px;
+}
+
+#header p {
+    font-style: italic;
+    color: #888888;
+    margin: 5px 0 0 0;
+}
+
+#main-content {
+    display: flex;
+    gap: 15px;
+}
+
+/* --- CAIXAS RETRÔ (BOXES) --- */
+.box {
+    background-color: #1a1a1a;
+    border: 1px solid #ffffff;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.box-title {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 4px 8px;
+    font-weight: bold;
+    border-bottom: 1px dashed #ff0000;
+    margin: -10px -10px 10px -10px;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+/* --- SIDEBAR (COLUNA DA ESQUERDA) --- */
+#sidebar {
+    width: 240px;
+    flex-shrink: 0;
+}
+
+.profile-pic-container {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.profile-pic-container img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+    border: 2px dashed #ffffff;
+    background-color: #222;
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.info-list li {
+    border-bottom: 1px dotted #333;
+    padding: 3px 0;
+}
+
+/* --- ÁREA PRINCIPAL (COLUNA DA DIREITA) --- */
+#content {
+    flex-grow: 1;
+}
+
+.post {
+    border: 1px dashed #ff0000;
+    background-color: #111111;
+    padding: 12px;
+    margin-bottom: 15px;
+}
+
+.post-title {
+    font-size: 15px;
+    color: #ff0000;
+    font-weight: bold;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 3px;
+}
+
+.post-date {
+    font-size: 10px;
+    color: #777777;
+    margin-bottom: 10px;
+}
+
+/* --- COMPONENTES INTERATIVOS --- */
+.vote-btn {
+    background: #333;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 4px 10px;
+    font-family: inherit;
+    font-size: 11px;
+    margin-right: 10px;
+    transition: transform 0.1s ease; /* Transição suave para o clique */
+}
+
+.vote-btn:hover {
+    background: #ff0000;
+    cursor: pointer;
+}
+
+/* Efeito visual quando o botão de like/dislike for clicado */
+.vote-btn:active {
+    transform: scale(0.95);
+}
+
+.comment-item {
+    border-bottom: 1px dotted #555;
+    padding: 8px 0;
+}
+
+.comment-user {
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.comment-text {
+    margin-top: 3px;
+}
+
+#comment-form input, #comment-form textarea {
+    width: 95%;
+    background-color: #000;
+    border: 1px solid #555;
+    color: #fff;
+    padding: 5px;
+    margin-bottom: 8px;
+    font-family: inherit;
+}
+
+#comment-form button {
+    background: #222;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 3px 12px;
+}
+
+#comment-form button:hover {
+    background: #555;
+    cursor: pointer;
+}
+
+/* --- RODAPÉ --- */
+#footer {
+    text-align: center;
+    border-top: 1px dashed #ff0000;
+    padding-top: 10px;
+    margin-top: 20px;
+    font-size: 10px;
+    color: #555555;
+}
